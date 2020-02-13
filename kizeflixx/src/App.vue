@@ -16,10 +16,6 @@
     <v-content class="content">
       <router-view></router-view>
     </v-content>
-    <v-footer>
-        {{ new Date().getFullYear() }} —
-        <strong>Ouahid-Aqodad</strong>
-    </v-footer>
   </v-app>
 </template>
 
@@ -48,22 +44,30 @@ export default {
 
 
 <style scoped>
-.app {
+/* .app {
   background: #000000;
   background: -webkit-linear-gradient(to left, #434343, #000000);
   background: linear-gradient(to left, #434343, #000000);
-}
+} */
 .navContainer {
   height: 100px;
-  background: #000000;
-  background: -webkit-linear-gradient(to left, #e74c3c, #000000);
-  background: linear-gradient(to left, #e74c3c, #000000);
+  background: #ba8b02;
+  background: -webkit-linear-gradient(
+    to right,
+    #181818,
+    #ba8b02
+  );
+  background: linear-gradient(
+    to right,
+    #181818,
+    #ba8b02
+  );
 }
 .content {
   margin-top: 6%;
 }
 .navTitle {
-  color: red;
+  color: orange;
   font-size: 5rem;
   margin-top: 20px;
   margin-left: 40px;
@@ -73,6 +77,7 @@ export default {
   font-size: x-large;
   margin: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  
 }
-
 </style>

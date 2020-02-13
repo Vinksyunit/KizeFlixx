@@ -1,15 +1,9 @@
 <template>
   <v-container class="movieSelect" grid-list-xl>
     <v-layout wrap>
-      <v-flex xs4
-        v-for="(item, index) in movieResponse"
-        :key="index"
-        mb-2>
+      <v-flex xs4 v-for="(item, index) in movieResponse" :key="index" mb-2>
         <v-card>
-          <v-img
-            :src="item.Poster"
-            aspect-ratio="1"
-          ></v-img>
+          <v-img :src="item.Poster" aspect-ratio="1"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -19,56 +13,57 @@
           </v-card-title>
 
           <v-card-actions class="justify-center">
-            <v-btn flat
-              color="green"
-              @click="singleMovie(item.imdbID)"
-              >Plus</v-btn>
+            <div class="text-center">
+              <v-btn  @click="singleMovie(item.imdbID)">
+                <v-icon dark>mdi-plus</v-icon>
+              </v-btn>
+            </div>
           </v-card-actions>
-
         </v-card>
       </v-flex>
-  </v-layout>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
-import movieApi from '@/services/MovieApi'
+import movieApi from "@/services/MovieApi";
 
 export default {
-  props: ['name'],
-  data () {
+  props: ["name"],
+  data() {
     return {
-      movieResponse: [],
-    }
+      movieResponse: []
+    };
   },
   methods: {
-    singleMovie (id) {
-      this.$router.push('/movie/' + id)
+    singleMovie(id) {
+      this.$router.push("/movie/" + id);
     },
 
-    fetchResult (value) {
-      movieApi.fetchMovieCollection(value)
+    fetchResult(value) {
+      movieApi
+        .fetchMovieCollection(value)
         .then(response => {
-            this.movieResponse = response.Search
+          this.movieResponse = response.Search;
         })
         .catch(error => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     }
   },
-  mounted () {
-    this.fetchResult(this.name)
+  mounted() {
+    this.fetchResult(this.name);
   },
   watch: {
-    name (value) {
-      this.fetchResult(value)
+    name(value) {
+      this.fetchResult(value);
     }
   }
-}
+};
 </script>
 
 <style scoped>
-.movieSelect{
-  mix-blend-mode: color-dodge
+.movieSelect {
+  mix-blend-mode: color-dodge;
 }
 </style>

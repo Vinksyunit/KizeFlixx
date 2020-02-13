@@ -2,18 +2,22 @@
   <v-container class="allMovies" grid-list-xl>
     <v-layout wrap>
       <v-flex xs4 v-for="(item, index) in movies" :key="index" mb-2>
-        <v-card>
+        <v-card  class="allCards">
           <v-img :src="item.Poster" aspect-ratio="1.3"></v-img>
 
-          <v-card-title primary-title>
-            <div>
+          <v-card-title class="allCards" primary-title>
+            <div class="descriptionCard">
               <h2>{{item.Title}}</h2>
               <div>{{item.Year}}</div>
             </div>
           </v-card-title>
 
           <v-card-actions class="justify-center">
-            <v-btn @click="singleMovie(item.imdbID)">Plus</v-btn>
+            <div class="text-center">
+              <v-btn class="mx-2" dark @click="singleMovie(item.imdbID)">
+                <v-icon dark>mdi-plus</v-icon>
+              </v-btn>
+            </div>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -50,6 +54,14 @@ export default {
 
 <style scoped>
 .allMovies {
+  margin-bottom: 80px;
   mix-blend-mode: color-dodge;
+  max-width: 80%;
+}
+.descriptionCard{
+  font-family: 'Quicksand'
+}
+.justify-center{
+  flex-flow: row-reverse
 }
 </style>

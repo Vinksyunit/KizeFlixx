@@ -4,10 +4,8 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import vuetify from '@/plugins/vuetify'
-import Carousel3d from 'vue-carousel-3d';
 
 
-Vue.use(Carousel3d);
 Vue.config.productionTip = false
 axios.defaults.baseURL = 'http://www.omdbapi.com/?apikey=b76b385c&page=1&type=movie&Content-Type=application/json'
 
