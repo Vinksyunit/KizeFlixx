@@ -70,6 +70,7 @@ export default {
 
   mounted() {
     movieApi
+    
       .fetchSingleMovie(this.id)
       .then(response => {
         this.singleMovie = response;        
@@ -78,6 +79,7 @@ export default {
           element.Value = parseFloat(element.Value.split(/\/|%/)[0]);
           element.Value =
             element.Value <= 10 ? element.Value / 2 : element.Value / 20;
+
         });
       })
       .catch(error => {
