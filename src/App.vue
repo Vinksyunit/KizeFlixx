@@ -81,13 +81,13 @@ export default {
   font-family: "Bebas Neue", cursive;
 }
 .search {
-  font-size: x-large;
+  font-size: 2vw;
   margin: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: black;
 }
 .v-input{
-  font-size: x-large;
+  font-size: 2vw;
   font-family: "Quicksand"
 }
 .footer {

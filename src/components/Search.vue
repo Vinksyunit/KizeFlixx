@@ -6,7 +6,7 @@
           <v-img :src="item.Poster" aspect-ratio="1.3"></v-img>
 
           <v-card-title primary-title>
-            <div>
+            <div class="descriptionCard">
               <h2>{{item.Title}}</h2>
               <div>{{item.Year}}</div>
             </div>
@@ -66,8 +66,13 @@ export default {
 .allCards {
   color: white;
   background-color: transparent;
+  width: 20vw;
 }
-.movieSelect{
+.descriptionCard {
+  font-family: "Quicksand";
+  font-size: 1vw
+}
+.movieSelect {
   max-width: 80%;
 }
 .justify-center {

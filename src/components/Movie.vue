@@ -143,9 +143,17 @@ export default {
 .primary--text {
   color: orange !important;
 }
-@media screen and (max-width: 860) {
-  .posterContainer {
-    display: none;
+@media (max-width: 860px) {
+
+  .description {
+    justify-content: center;
+    display: inline-block;
+    text-align: -webkit-center;
+  }
+  .poster {
+    width: 80%;
+    height: 60vh;
+    margin-top: 10%;
   }
 }
 </style>
