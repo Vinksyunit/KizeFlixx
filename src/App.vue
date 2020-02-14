@@ -6,7 +6,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-flex xs12 sm6 md3>
-        <v-text-field v-model="searchString"></v-text-field>
+        <v-text-field color="black" v-model="searchString"></v-text-field>
       </v-flex>
       <v-btn flat :disabled="!dataAvailable" @click="searchMovie">
         <span class="search">Search</span>
