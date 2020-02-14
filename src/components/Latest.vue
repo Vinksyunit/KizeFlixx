@@ -1,6 +1,5 @@
 <template>
   <v-container class="allMovies" grid-list-xl>
-
     <v-layout wrap>
       <v-flex xs4 v-for="(item, index) in movies" :key="index" mb-2>
         <v-card class="allCards">
@@ -32,17 +31,15 @@ import movieApi from "@/services/MovieApi";
 export default {
   data() {
     return {
-      movies: [],
+      movies: []
     };
   },
 
   mounted() {
-    movieApi
-      .fetchMovieCollection("superman")
-      .then(response => {
-        this.movies = response.Search;
-        console.log(this.movies);
-      })
+    movieApi.fetchMovieCollection("superman").then(response => {
+      this.movies = response.Search;
+      console.log(this.movies);
+    });
   },
 
   methods: {
@@ -54,9 +51,10 @@ export default {
 </script>
 
 <style scoped>
-.allCards{
+.allCards {
   color: white;
-  background-color: transparent
+  background-color: transparent;
+  width: 20vw;
 }
 .allMovies {
   margin-bottom: 80px;
@@ -64,6 +62,7 @@ export default {
 }
 .descriptionCard {
   font-family: "Quicksand";
+  font-size: 1vw
 }
 .justify-center {
   flex-flow: row-reverse;

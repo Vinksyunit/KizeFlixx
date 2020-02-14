@@ -28,7 +28,7 @@
       </div>
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} —
-        <strong>KizeFlix</strong>
+        <strong>Ouahid - KizeFlix</strong>
       </v-card-text>
     </v-card>
   </v-app>
@@ -75,7 +75,7 @@ export default {
 }
 .navTitle {
   color: orange;
-  font-size: 5rem;
+  font-size: 5vw;
   margin-top: 20px;
   margin-left: 40px;
   font-family: "Bebas Neue", cursive;
@@ -102,5 +102,14 @@ export default {
 }
 .linkedin {
   margin: 15px;
+}
+
+@media (min-width: 0){
+
+.flex.xs12 {
+    flex-basis: 100%;
+    flex-grow: 0;
+    max-width: 20%;
+}
 }
 </style>
