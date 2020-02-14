@@ -14,7 +14,7 @@
 
           <v-card-actions class="justify-center">
             <div class="text-center">
-              <v-btn  @click="singleMovie(item.imdbID)">
+              <v-btn class="mx-2" dark @click="singleMovie(item.imdbID)">
                 <v-icon dark>mdi-plus</v-icon>
               </v-btn>
             </div>
@@ -65,5 +65,8 @@ export default {
 <style scoped>
 .movieSelect {
   mix-blend-mode: color-dodge;
+}
+.justify-center{
+  flex-flow: row-reverse
 }
 </style>
