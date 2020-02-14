@@ -59,11 +59,11 @@ export default {
 
 
 <style scoped>
-/* .app {
+.app {
   background: #000000;
   background: -webkit-linear-gradient(to left, #434343, #000000);
   background: linear-gradient(to left, #434343, #000000);
-} */
+}
 .navContainer {
   height: 100px;
   background: #ba8b02;
@@ -85,6 +85,10 @@ export default {
   margin: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: black;
+}
+.v-input{
+  font-size: x-large;
+  font-family: "Quicksand"
 }
 .footer {
   background: #ba8b02;

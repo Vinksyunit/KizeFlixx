@@ -1,5 +1,4 @@
 <template>
-  <div class="background">
     <v-container>
       <v-layout style="ba" wrap>
         <v-flex xs12 mr-1 ml-1>
@@ -57,7 +56,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </div>
 </template>
 
 <script>
@@ -100,7 +98,7 @@ export default {
 
 <style scoped>
 .container {
-  margin: 0;
+  margin-bottom: 40px;
   justify-content: center;
   max-width: 100%;
   font-family: "Quicksand";
@@ -132,7 +130,7 @@ export default {
   flex-flow: row-reverse;
 }
 .ratingsButton {
-  background-color: white;
+  background-color: transparent!important;
   color: orange;
   font-size: large;
   font-family: "Quicksand";

@@ -7,7 +7,7 @@ import vuetify from '@/plugins/vuetify'
 
 
 Vue.config.productionTip = false
-axios.defaults.baseURL = 'http://www.omdbapi.com/?apikey=61d07e3&page=1&type=movie&Content-Type=application/json'
+axios.defaults.baseURL = 'https://www.omdbapi.com/?apikey=61d07e3&page=1&type=movie&'
 
 new Vue({
   render: h => h(App),

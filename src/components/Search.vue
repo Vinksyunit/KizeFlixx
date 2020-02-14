@@ -2,8 +2,8 @@
   <v-container class="movieSelect" grid-list-xl>
     <v-layout wrap>
       <v-flex xs4 v-for="(item, index) in movieResponse" :key="index" mb-2>
-        <v-card>
-          <v-img :src="item.Poster" aspect-ratio="1"></v-img>
+        <v-card class="allCards">
+          <v-img :src="item.Poster" aspect-ratio="1.3"></v-img>
 
           <v-card-title primary-title>
             <div>
@@ -63,10 +63,14 @@ export default {
 </script>
 
 <style scoped>
-.movieSelect {
-  mix-blend-mode: color-dodge;
+.allCards {
+  color: white;
+  background-color: transparent;
 }
-.justify-center{
-  flex-flow: row-reverse
+.movieSelect{
+  max-width: 80%;
+}
+.justify-center {
+  flex-flow: row-reverse;
 }
 </style>
