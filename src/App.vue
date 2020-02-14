@@ -2,7 +2,7 @@
   <v-app class="app">
     <v-toolbar class="navContainer">
       <v-toolbar-title class="navTitle">
-        <router-link to="/" tag="span" style="cursor: pointer">KizeFlix</router-link>
+        <router-link to="/" tag="span" style="cursor: pointer" class="animated fadeInLeft delay-1s">KizeFlix</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-flex xs12 sm6 md3>

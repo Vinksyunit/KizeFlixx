@@ -14,9 +14,11 @@
 
           <v-card-actions class="justify-center">
             <div class="text-center">
-              <v-btn class="mx-2" dark @click="singleMovie(item.imdbID)">
-                <v-icon dark>mdi-plus</v-icon>
-              </v-btn>
+              <div class="cards">
+                <v-btn class="mx-2" dark @click="singleMovie(item.imdbID)">
+                  <v-icon dark class="animated infinite heartBeat delay-2s">mdi-plus</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-card-actions>
         </v-card>
@@ -70,12 +72,15 @@ export default {
 }
 .descriptionCard {
   font-family: "Quicksand";
-  font-size: 1vw
+  font-size: 1vw;
 }
 .movieSelect {
   max-width: 80%;
 }
 .justify-center {
   flex-flow: row-reverse;
+}
+.cards :hover {
+  background-color: orange;
 }
 </style>
