@@ -16,6 +16,21 @@
     <v-content class="content">
       <router-view></router-view>
     </v-content>
+    <v-card class="footer">
+      <v-divider></v-divider>
+      <div>
+        <a href="https://github.com/ako180991" target="_blank">
+          <img class="github" src="./assets/github.png" width="50vw" />
+        </a>
+        <a href="https://www.linkedin.com/in/oaqodad/" target="_blank">
+          <img class="linkedin" src="./assets/linkedin.png" width="50vw" />
+        </a>
+      </div>
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }} —
+        <strong>KizeFlix</strong>
+      </v-card-text>
+    </v-card>
   </v-app>
 </template>
 
@@ -52,16 +67,8 @@ export default {
 .navContainer {
   height: 100px;
   background: #ba8b02;
-  background: -webkit-linear-gradient(
-    to right,
-    #181818,
-    #ba8b02
-  );
-  background: linear-gradient(
-    to right,
-    #181818,
-    #ba8b02
-  );
+  background: -webkit-linear-gradient(to right, #181818, #ba8b02);
+  background: linear-gradient(to right, #181818, #ba8b02);
 }
 .content {
   margin-top: 6%;
@@ -78,6 +85,18 @@ export default {
   margin: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: black;
-  
+}
+.footer {
+  background: #ba8b02;
+  background: -webkit-linear-gradient(to right, #181818, #ba8b02);
+  background: linear-gradient(to right, #181818, #ba8b02);
+  height: 150px;
+  text-align: center;
+}
+.github {
+  margin: 15px;
+}
+.linkedin {
+  margin: 15px;
 }
 </style>
