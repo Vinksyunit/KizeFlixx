@@ -1,6 +1,6 @@
 # KizeFlix
 
-KizeFlix is a Movie App who     .
+Kizeflix is ​​a Movie App where you can find lots of movies, their description and reviews.
 
 ## Installation
 
@@ -8,6 +8,13 @@ KizeFlix is a Movie App who     .
 npm install
 npm run serve   
 ```
+## Api
+
+OMDb Api
+
+![20% center](src/assets/omdb.png)
+
+Link : http://www.omdbapi.com/
 
 ## Dependencies
 
@@ -15,7 +22,8 @@ npm run serve
 npm install vuetify
 npm install axios
 npm install vue-router
-
+npm install animate.css
+npm install vue-carousel-3d
 ```
 
 ## Thanks
